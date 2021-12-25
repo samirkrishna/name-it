@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
+import SearchBox from "../SearchBox/SearchBox";
 import "./App.css";
 function App() {
+  const [title] = useState("Name-it");
+
   return (
     <div>
-      <Header />
+      <Header title={title} />
+      <SearchBox />
     </div>
   );
 }

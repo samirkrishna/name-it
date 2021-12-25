@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  // const [state,setState] = useState({title:"name-it"})
   return (
     <div className="header">
       <img
@@ -9,7 +10,8 @@ const Header = () => {
         className="header-image"
         alt=""
       />
-      <h1 className="header-title">Name It</h1>
+      <h1 className="header-title">{props.title}</h1>
+      {/* <button onClick={()=>setState({props:"samir"})}>On click</button> */}
     </div>
   );
 };
